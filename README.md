@@ -3,6 +3,25 @@
 
 - 🔭 I’m currently working as **Helpdesk Support**
 
+## Demo app: contador de “Spoiler” para YouTube
+
+He añadido una mini app web en `spoiler-counter/` que permite:
+
+- Cargar un vídeo de YouTube pegando su URL.
+- Activar reconocimiento de voz en tiempo real.
+- Contar cuántas veces se detecta la palabra **"Spoiler"** mientras suena el vídeo.
+
+### Cómo ejecutarla
+
+```bash
+cd spoiler-counter
+python3 -m http.server 8000
+```
+
+Y abre: `http://localhost:8000`
+
+> Nota: la precisión depende del navegador y de la fuente de audio configurada para el micrófono.
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/blancoloureiro" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="blancoloureiro" height="30" width="40" /></a>

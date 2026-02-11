@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de "Spoiler" en YouTube</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Contador de “Spoiler” en tiempo real</h1>
+      <p class="description">
+        Pega un enlace de YouTube, reproduce el vídeo y usa el reconocimiento de voz para contar
+        cuántas veces se dice “Spoiler”.
+      </p>
+
+      <section class="card">
+        <label for="youtubeUrl">Enlace de YouTube</label>
+        <div class="row">
+          <input id="youtubeUrl" type="url" placeholder="https://www.youtube.com/watch?v=..." />
+          <button id="loadVideoBtn">Cargar vídeo</button>
+        </div>
+        <div id="playerWrapper" class="player-wrapper hidden">
+          <iframe
+            id="youtubePlayer"
+            title="Reproductor de YouTube"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Contador</h2>
+        <div class="counter" id="counter">0</div>
+        <p id="status" class="status">Pulsa “Iniciar escucha” para empezar.</p>
+        <div class="row controls">
+          <button id="startBtn">Iniciar escucha</button>
+          <button id="stopBtn" disabled>Detener</button>
+          <button id="resetBtn">Reiniciar contador</button>
+        </div>
+        <details>
+          <summary>Consejos para mejorar la detección</summary>
+          <ul>
+            <li>Usa auriculares para evitar ruido ambiente.</li>
+            <li>Permite el uso del micrófono cuando el navegador lo pida.</li>
+            <li>
+              Si quieres contar el audio del sistema, configura una fuente como “Stereo Mix” o una
+              entrada virtual.
+            </li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="card">
+        <h2>Último texto detectado</h2>
+        <p id="lastDetected" class="transcript">Aún no hay transcripción.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
